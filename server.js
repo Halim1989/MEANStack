@@ -1,13 +1,17 @@
-// load the express package and create our app
+// get our packages
 var express = require('express');
 var app = express();
 var path = require('path');
+var port = process.env.PORT || 8080;
 
-// send our index.html file to the user for the home page
+// configure public assets folder
+app.use(express.static(__dirname + '/public'));
+
+// route to send index.html
 app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname + '/index.html'));
+	res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
 });
 
 // start the server
-app.listen(8080);
-console.log('8080 is the magic port!');
+app.listen(port);
+console.log('Magic happens on http://localhost:' + port);

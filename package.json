@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Halim1989/MEANStack#readme",
   "dependencies": {
+    "bower": "^1.7.2",
     "express": "^4.13.4"
   }
 }

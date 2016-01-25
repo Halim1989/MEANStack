@@ -1,0 +1,26 @@
+{
+  "name": "meanstanck",
+  "description": "MEANStack is template of a MEAN Project",
+  "main": "server.js",
+  "authors": [
+    "BOUNFOUF Halim"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Halim1989/MEANStack",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.9",
+    "angular-route": "~1.4.9",
+    "angular-animate": "~1.4.9"
+  }
+}
