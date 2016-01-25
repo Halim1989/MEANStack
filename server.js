@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var port = process.env.PORT || 8080;
+var config = require('./config');
 
 // configure public assets folder
 app.use(express.static(__dirname + '/public'));
@@ -13,5 +13,5 @@ app.get('/', function(req, res) {
 });
 
 // start the server
-app.listen(port);
-console.log('Magic happens on http://localhost:' + port);
+app.listen(config.port);
+console.log('Magic happens on http://localhost:' + config.port);
