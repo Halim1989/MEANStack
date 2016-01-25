@@ -29,6 +29,9 @@ node_modules
 # bower dependencies
 public/assets/libs
 
+# dist
+public/dist
+
 # Optional npm cache directory
 .npm
 
