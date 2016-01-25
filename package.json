@@ -1,0 +1,22 @@
+{
+  "name": "meanstanck",
+  "version": "1.0.0",
+  "description": "MEANStack is template of a MEAN Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Halim1989/MEANStack.git"
+  },
+  "author": "BOUNFOUF Halim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Halim1989/MEANStack/issues"
+  },
+  "homepage": "https://github.com/Halim1989/MEANStack#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
