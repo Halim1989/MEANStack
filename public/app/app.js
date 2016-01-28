@@ -1,1 +1,5 @@
-angular.module('myApp', ['app.routes', 'mainCtrl']);
+angular.module('myApp', [
+	'app.routes',
+	'todoService',
+	'mainCtrl'
+]);

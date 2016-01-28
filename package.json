@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Halim1989/MEANStack#readme",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "bower": "^1.7.2",
     "express": "^4.13.4",
     "gulp": "^3.9.0",
@@ -28,6 +29,8 @@
     "gulp-nodemon": "^2.0.6",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.1",
-    "jshint": "^2.9.1"
+    "jshint": "^2.9.1",
+    "mongoose": "^4.3.7",
+    "morgan": "^1.6.1"
   }
 }
