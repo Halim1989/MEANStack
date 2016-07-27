@@ -1,0 +1,22 @@
+<div class="container">
+
+	<div class="form-group">
+		<input type="text" class="form-control" ng-model="todos.search" placeholder="Search">
+	</div>
+
+	<table class="table table-striped">
+		<tbody>
+			<tr ng-repeat="todo in todos.todos | filter:todos.search">
+				<td>{{todo.task}}</td>
+				<td>
+					<a href="#" ng-click="todos.deleteTodo(todo)"><span class="glyphicon glyphicon-remove"></span></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- form to add computer to the list -->
+	<form class="form-inline" ng-submit="todos.addTodo()">
+		<input type="text" class="form-control" placeholder="todo" ng-model="todos.todo.task">
+		<button type="submit" class="btn btn-success">Add</button>
+	</form>
+</div>

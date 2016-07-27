@@ -1,32 +1,27 @@
-angular.module('mainCtrl', [])
+angular.module('mainCtrl', ['todoCtrl', 'loginCtrl'])
 
-.controller('mainController', function(Todo) {
+.controller('mainController', function($rootScope, $location, Auth) {
 
 	var vm = this;
 
-	vm.message = 'MEAN Stack Template';
-	vm.search = '';
-	vm.todo = {};
+	// check to see if a user is logged in on every request
+	$rootScope.$on('$routeChangeStart', function() {
+		// get info if a person is logged in
+		vm.loggedIn = Auth.isLoggedIn();
 
-	display_all();
+		if(vm.loggedIn){
+			Auth.getUser().success(function(data) {
+				vm.user = data;
+			});
+		}
+	});
 
-	vm.addTodo = function() {
-		Todo.create(vm.todo).success(function(data){
-			display_all();
-			vm.todo = {};
-		});
-	}
-
-	vm.deleteTodo = function(todo){
-		Todo.delete(todo._id).success(function(data){
-			display_all();
-		});
-	}
-
-	function display_all(){
-		Todo.all().success(function(data) {
-			vm.todos = data;
-		});
-	}
+	// function to handle logging out
+	vm.doLogout = function() {
+		Auth.logout();
+		// reset all user info
+		vm.user = {};
+		$location.path('/login');
+	};
 
 });

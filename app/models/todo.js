@@ -1,4 +1,4 @@
-//grab the packages that we need for the user model
+//grab the packages that we need for the todo model
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 

@@ -1,5 +1,5 @@
 module.exports = {
 	'port': process.env.PORT || 8080,
-	'database': 'mongodb://localhost:27017/mean_stack_template',
+	'database': 'mongodb://halim:halim@jello.modulusmongo.net:27017/aPuzo7si',
 	'secret': 'meanstacktemplate'
 };
